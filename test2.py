@@ -1,3 +1,5 @@
 import work
 
-print(work.run('test.py'))
+
+output = work.run('test.py','testinput.txt')
+print(output)
