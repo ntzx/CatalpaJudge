@@ -1,5 +1,6 @@
 import work
 
 
-output = work.run('test.py','testinput.txt')
+output,error = work.run('test.py','testinput')
 print(output)
+print(error)
