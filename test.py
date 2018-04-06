@@ -1,3 +1,3 @@
-import time
-time.sleep(2)
-print(input())
+import uuid
+
+print(type(uuid.uuid1()))
