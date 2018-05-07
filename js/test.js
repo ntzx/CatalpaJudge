@@ -1,6 +1,6 @@
 var $$ = mdui.JQ  
 
-function uuid()
+function getUuid()
 {
     var s = [];
     var hexDigits = "0123456789abcdef";
@@ -15,15 +15,15 @@ function uuid()
 }//我也知道uuid不该是这么简单，但先这样凑合
 
 $$('#postCode').on('click',function postCode(e){
-    uuid = uuid();
+    var uuid = getUuid();
     $$('#uuid').text(uuid);
-    data={
+    var select = document.getElementById("lang").options;
+    var lang = select[document.getElementById("lang").selectedIndex].text;
+    var data={
         uuid:uuid,
-        lang:"lang",//如何选择
+        lang:lang,
         code:$$("#code").text(), 
     };
-    console.log($$("#lang").selected);
-    console.log(data);
     $$.ajax({
         method:"POST",
         url:"test/postCode",
