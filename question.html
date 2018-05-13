@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -7,8 +7,9 @@
   <link href="css/mdui.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+<div class = "mdui-container ">
   <div class="mdui-appbar">
-    <div class="mdui-tab mdui-tab-centered" id="tab" mdui-tab>
+    <div class="mdui-tab mdui-tab-centered " id="tab" mdui-tab>
       <a href="#tab1" class="mdui-ripple mdui-ripple-white">问题描述</a>
       <a href="#tab2" class="mdui-ripple mdui-ripple-white">提交代码</a>
     </div>
@@ -19,17 +20,22 @@
   </div>
   <div id="tab2">
     <input hidden id="uuid">
-    <h3 id="result" class="mdui-center" hidden></h3>
-    <textarea cols="100" rows="30" class="mdui-textfield-textarea mdui-center" id="code"></textarea>
+    <h3 id="result" class="" hidden></h3>
+    <textarea rows="30" class="mdui-col-xs-12 " id="code"></textarea>
     <p>
-      <select class="mdui-select mdui-center" id="lang">
+	<p>
+	   &nbsp;
+	</p>
+	<a  class=" mdui-ripple-white  ">选择语言</a>
+	&nbsp;
+      <select class="mdui-select " id="lang">
         <option>C++</option>
         <option>Python</option>
       </select>
+	  <button class="mdui-btn mdui-btn-raised mdui-ripple" id="postCode">提交</button>
     </p>
-    <div class="mdui-container">
-      <button class="mdui-btn mdui-btn-raised mdui-center" id="postCode">提交</button>
-    </div>
+   
+  </div>
   </div>
 <script src="js/mdui.js"></script>
 <script src="js/question.js"></script>

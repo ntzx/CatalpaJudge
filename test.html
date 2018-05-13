@@ -7,32 +7,38 @@
   <link href="css/mdui.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
-  <div class="mdui-appbar">
+  <div class="mdui-container ">
+   <div class="mdui-appbar">
     <div class="mdui-tab mdui-tab-centered" id="tab" mdui-tab>
       <a href="#tab1" class="mdui-ripple mdui-ripple-white">代码提交</a>
       <a href="#tab2" class="mdui-ripple mdui-ripple-white">查看输出</a>
     </div>
-  </div>
-  <br />
-  <div id="tab1">
+   </div>
+   <br />
+   <div id="tab1">
     <input hidden id="uuid">
-    <textarea cols="100" rows="30" class="mdui-textfield-textarea mdui-center" id="code"></textarea>
-    <p>
-      <select class="mdui-select mdui-center" id="lang">
+    <textarea rows="30" class="mdui-col-xs-12" id="code"></textarea>
+	<p>
+	&nbsp;
+	</p>
+	<p>选择语言：
+	    <select class="mdui-select" id="lang">
         <option>C++</option>
         <option>Python</option>
-      </select>
-    </p>
-    <div class="mdui-container">
-      <button class="mdui-btn mdui-btn-raised mdui-center" id="postCode">提交</button>
-    </div>
-  </div>
-  <div id="tab2">
-    <textarea readonly cols="100" rows="30" class="mdui-textfield-textarea mdui-center" id="output">请先提交代码</textarea>
+     </select> 
+	 &nbsp;&nbsp;
+     <button class="mdui-btn mdui-btn-raised mdui-ripple" id="postCode">提交</button>
+	</p>
+   </div>
+   <div id="tab2">
     <br />
-    <div class="mdui-container">
-      <button class="mdui-btn mdui-btn-raised mdui-center" id="getResult">刷新</button>
-    </div>
+    <textarea readonly cols="100" rows="30" class=" mdui-col-xs-12" id="output">请先提交代码</textarea>
+    <br />
+	<p>
+	&nbsp;
+	</p>
+    <button class="mdui-btn mdui-btn-raised mdui-ripple" id="getResult">刷新</button>
+   </div>
   </div>
 <script src="js/mdui.js"></script>
 <script src="js/test.js"></script>
